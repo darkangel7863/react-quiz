@@ -69,7 +69,7 @@ function QuizProvider({ children }) {
     0
   );
   useEffect(function () {
-    fetch('https://react-quiz7863.app/.netlify/functions/users
+    fetch('https://react-quiz7863.app/.netlify/functions/questions
 ')
       .then(res => res.json())
       .then(data => dispatch({ type: 'dataReceived', payload: data }))
