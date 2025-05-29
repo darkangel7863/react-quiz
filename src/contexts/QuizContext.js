@@ -63,8 +63,8 @@ function QuizProvider({ children }) {
     { questions, status, index, answer, points, highscore, secondsRemaining },
     dispatch,
   ] = useReducer(reducer, initialState);
-  const numQuestions = questions.length;
-  const maxPossiblePoints = questions.reduce(
+  const numQuestions = questions?.length;
+  const maxPossiblePoints = questions?.reduce(
     (prev, cur) => prev + cur.points,
     0
   );
