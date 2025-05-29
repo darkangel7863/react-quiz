@@ -71,7 +71,7 @@ function QuizProvider({ children }) {
   useEffect(function () {
     fetch('https://darkangel7863.github.io/react-quiz-json/data.json')
       .then(res => res.json())
-      .then(data => dispatch({ type: 'dataReceived', payload: data.questions }))
+      .then(data => dispatch({ type: 'dataReceived', payload: data }))
       .catch(err => dispatch({ type: 'dataFailed' }));
   }, []);
   return (
